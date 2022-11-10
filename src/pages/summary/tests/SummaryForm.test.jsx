@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, logRoles } from '@testing-library/react';
+import { render, screen, fireEvent, logRoles } from '../../../test-utils/testing-library-utils';
 import SummaryForm from '../SummaryForm';
 import userEvent from '@testing-library/user-event';
 
@@ -30,7 +30,7 @@ describe('Summary Form', () => {
     test('popover response', async () => {
         const user = userEvent.setup();
         render(<SummaryForm />);
-    
+
         const nullPopover = screen.queryByTestId('terms-popover-id');
         expect(nullPopover).not.toBeInTheDocument();
 

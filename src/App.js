@@ -1,12 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import OrderSummary from './pages/summary/OrderSummary';
+import { AppContextProvider } from './contexts/appContext';
+import Page from './pages/summary';
 
 function App() {
   return (
-    <div className="App">
-      <OrderSummary />
-    </div>
+    <AppContextProvider>
+      <div className="App">
+        <Page/>
+      </div>
+    </AppContextProvider>
   );
 }
 
